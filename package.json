@@ -1,6 +1,6 @@
 {
   "name": "seqfx",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "LordSequoia's Reactive Utilities",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
