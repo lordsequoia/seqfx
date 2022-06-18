@@ -20,7 +20,7 @@ export const useStorageOperations = (cwd: string): StorageOperations => {
 
   const write = async (file: WithData<File>): Promise<WithData<File>> => {
     return new Promise<WithData<File>>((resolve) => {
-      writeFile(file.path, file.data).then((_) => resolve(file));
+      writeFile(file.path, file.data).then(() => resolve(file));
     });
   };
 
