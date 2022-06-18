@@ -2,7 +2,7 @@ import test from 'ava';
 
 import { asyncABC, double, power } from './utils';
 
-test('utils', (t) => {
+test('utils', () => {
   test('getABC', async (t) => {
     t.deepEqual(await asyncABC(), ['a', 'b', 'c']);
   });
