@@ -1,7 +1,7 @@
+/* eslint-disable import/order */
 /* eslint-disable functional/immutable-data */
-import { resolve as resolvePath } from 'node:path';
-
 import { createDomain, Domain, Store } from 'effector';
+import { resolve as resolvePath } from 'node:path';
 
 import {
   File,
