@@ -1,5 +1,10 @@
 {
   "name": "seqfx",
+  "author": {
+    "name": "LordSequoia",
+    "email": "thelordsequoia@gmail.com",
+    "url": "https://seqmc.com"
+  },
   "version": "0.0.2",
   "description": "LordSequoia's Reactive Utilities",
   "main": "build/main/index.js",
@@ -45,7 +50,8 @@
     "@bitauth/libauth": "^1.17.1",
     "chokidar": "^3.5.3",
     "effector": "^22.3.0",
-    "rxjs": "^7.5.5"
+    "rxjs": "^7.5.5",
+    "type-fest": "^2.13.1"
   },
   "devDependencies": {
     "@ava/typescript": "^1.1.1",
