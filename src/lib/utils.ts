@@ -90,20 +90,22 @@ export const defaultMaxRandomNumber = 100;
 
 /**
  * Return a random number between 0 and max. Default max is @see defaultMaxRandomNumber
- * 
+ *
  * @param max maximum number to generate
- * @returns 
+ * @returns
  */
-export const randomNumber = (max?: number): number => Math.floor(Math.random() * (max || defaultMaxRandomNumber))
+export const randomNumber = (max?: number): number =>
+  Math.floor(Math.random() * (max || defaultMaxRandomNumber));
 
 /**
  * Return a random element from the array.
- * 
+ *
  * ```ts
  *  const randomFruit = randomElement<string>(['apple', 'banana', 'orange', 'melon'])
  * ```
- * 
+ *
  * @param array options to choose from
  * @returns random element of provided array, typed as provided type or any
  */
-export const randomElement = <T=any>(array: T[]): T => array[Math.floor(Math.random() * array.length)]
+export const randomElement = <T = unknown>(array: readonly T[]): T =>
+  array[Math.floor(Math.random() * array.length)];
