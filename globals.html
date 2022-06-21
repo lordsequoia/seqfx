@@ -71,6 +71,10 @@
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias"><a href="globals.html#addons" class="tsd-kind-icon">Addons</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#array_" class="tsd-kind-icon">Array$</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#arrayopts_" class="tsd-kind-icon">Array<wbr>Opts$</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#bool_" class="tsd-kind-icon">Bool$</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#boolopts_" class="tsd-kind-icon">Bool<wbr>Opts$</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#existsfileeffect" class="tsd-kind-icon">Exists<wbr>File<wbr>Effect</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#file" class="tsd-kind-icon">File</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#filedefinition" class="tsd-kind-icon">File<wbr>Definition</a></li>
@@ -94,11 +98,21 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable"><a href="globals.html#defaultmaxrandomnumber" class="tsd-kind-icon">default<wbr>Max<wbr>Random<wbr>Number</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#array_" class="tsd-kind-icon">array$</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#asyncabc" class="tsd-kind-icon">asyncABC</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#bool_" class="tsd-kind-icon">bool$</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#double" class="tsd-kind-icon">double</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#power" class="tsd-kind-icon">power</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#randomelement" class="tsd-kind-icon">random<wbr>Element</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#randomnumber" class="tsd-kind-icon">random<wbr>Number</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#usestorage" class="tsd-kind-icon">use<wbr>Storage</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#usestorageeffects" class="tsd-kind-icon">use<wbr>Storage<wbr>Effects</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#usestorageevents" class="tsd-kind-icon">use<wbr>Storage<wbr>Events</a></li>
@@ -117,9 +131,262 @@
 					<div class="tsd-signature tsd-kind-icon">Addons<span class="tsd-signature-symbol">:</span> <a href="globals.html#storageevents" class="tsd-signature-type">StorageEvents</a><span class="tsd-signature-symbol"> &amp; </span><a href="globals.html#storageeffects" class="tsd-signature-type">StorageEffects</a><span class="tsd-signature-symbol"> &amp; </span><a href="globals.html#storageoperations" class="tsd-signature-type">StorageOperations</a><span class="tsd-signature-symbol"> &amp; </span><a href="globals.html#storagewatcher" class="tsd-signature-type">StorageWatcher</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/storage.ts#L25">lib/storage/storage.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/storage.ts#L25">lib/storage/storage.ts:25</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="array_" class="tsd-anchor"></a>
+					<h3>Array$</h3>
+					<div class="tsd-signature tsd-kind-icon">Array$&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>$filter<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>$map<span class="tsd-signature-symbol">: </span>&lt;S&gt;<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>$values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>find<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>push<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>remove<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>reset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>update<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/shapes/array.ts#L8">lib/shapes/array.ts:8</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Type for a reactive array. @see array$</p>
+						</div>
+					</div>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>T = <span class="tsd-signature-type">unknown</span></h4>
+						</li>
+					</ul>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> $filter<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-signature">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>fn: <span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></h5>
+														<ul class="tsd-parameters">
+															<li class="tsd-parameter-signature">
+																<ul class="tsd-signatures tsd-kind-type-literal">
+																	<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+																</ul>
+																<ul class="tsd-descriptions">
+																	<li class="tsd-description">
+																		<h4 class="tsd-parameters-title">Parameters</h4>
+																		<ul class="tsd-parameters">
+																			<li>
+																				<h5>v: <span class="tsd-signature-type">T</span></h5>
+																			</li>
+																		</ul>
+																		<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+																	</li>
+																</ul>
+															</li>
+														</ul>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> $map<span class="tsd-signature-symbol">: </span>&lt;S&gt;<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-signature">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-has-type-parameter">
+											<li class="tsd-signature tsd-kind-icon">&lt;S&gt;<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-type-parameters-title">Type parameters</h4>
+												<ul class="tsd-type-parameters">
+													<li>
+														<h4>S</h4>
+													</li>
+												</ul>
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>fn: <span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">S</span></h5>
+														<ul class="tsd-parameters">
+															<li class="tsd-parameter-signature">
+																<ul class="tsd-signatures tsd-kind-type-literal">
+																	<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span></li>
+																</ul>
+																<ul class="tsd-descriptions">
+																	<li class="tsd-description">
+																		<h4 class="tsd-parameters-title">Parameters</h4>
+																		<ul class="tsd-parameters">
+																			<li>
+																				<h5>v: <span class="tsd-signature-type">T</span></h5>
+																			</li>
+																		</ul>
+																		<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">S</span></h4>
+																	</li>
+																</ul>
+															</li>
+														</ul>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> $values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> find<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-signature">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>key: <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span></h5>
+													</li>
+													<li>
+														<h5>value: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> push<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> remove<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> reset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> update<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="arrayopts_" class="tsd-anchor"></a>
+					<h3>Array<wbr>Opts$</h3>
+					<div class="tsd-signature tsd-kind-icon">Array<wbr>Opts$&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>domain<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Domain</span><span class="tsd-signature-symbol">; </span>eq<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/shapes/array.ts#L25">lib/shapes/array.ts:25</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Use none, some or all of these to initialize a reactive array.</p>
+						</div>
+					</div>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>T = <span class="tsd-signature-type">unknown</span></h4>
+						</li>
+					</ul>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> domain<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Domain</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> eq<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-signature">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>a: <span class="tsd-signature-type">T</span></h5>
+													</li>
+													<li>
+														<h5>b: <span class="tsd-signature-type">T</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="bool_" class="tsd-anchor"></a>
+					<h3>Bool$</h3>
+					<div class="tsd-signature tsd-kind-icon">Bool$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>$value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>setFalse<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>setTrue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>toggle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/shapes/bool.ts#L3">lib/shapes/bool.ts:3</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> $value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> set<wbr>False<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> set<wbr>True<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> toggle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="boolopts_" class="tsd-anchor"></a>
+					<h3>Bool<wbr>Opts$</h3>
+					<div class="tsd-signature tsd-kind-icon">Bool<wbr>Opts$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>domain<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Domain</span><span class="tsd-signature-symbol">; </span>initialValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/shapes/bool.ts#L11">lib/shapes/bool.ts:11</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> domain<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Domain</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> initial<wbr>Value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+						</ul>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="existsfileeffect" class="tsd-anchor"></a>
@@ -127,7 +394,7 @@
 					<div class="tsd-signature tsd-kind-icon">Exists<wbr>File<wbr>Effect<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Effect</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/effects.ts#L12">lib/storage/effects.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/effects.ts#L12">lib/storage/effects.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -137,7 +404,7 @@
 					<div class="tsd-signature tsd-kind-icon">File<span class="tsd-signature-symbol">:</span> <a href="globals.html#withmaybe" class="tsd-signature-type">WithMaybe</a><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#fileref" class="tsd-signature-type">FileRef</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/types.ts#L19">lib/storage/types.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/types.ts#L19">lib/storage/types.ts:19</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -147,7 +414,7 @@
 					<div class="tsd-signature tsd-kind-icon">File<wbr>Definition<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>stats<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Stats</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/types.ts#L3">lib/storage/types.ts:3</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/types.ts#L3">lib/storage/types.ts:3</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -168,7 +435,7 @@
 					<div class="tsd-signature tsd-kind-icon">File<wbr>Event<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-symbol">[</span>eventName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span>stats<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Stats</span><span class="tsd-signature-symbol">]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/types.ts#L21">lib/storage/types.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/types.ts#L21">lib/storage/types.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -178,7 +445,7 @@
 					<div class="tsd-signature tsd-kind-icon">File<wbr>Ref<span class="tsd-signature-symbol">:</span> <a href="globals.html#withmaybe" class="tsd-signature-type">WithMaybe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>stats<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Stats</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/types.ts#L15">lib/storage/types.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/types.ts#L15">lib/storage/types.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -188,30 +455,30 @@
 					<div class="tsd-signature tsd-kind-icon">Read<wbr>File<wbr>Effect<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Effect</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">, </span><a href="globals.html#withdata" class="tsd-signature-type">WithData</a><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/effects.ts#L10">lib/storage/effects.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/effects.ts#L10">lib/storage/effects.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="storage" class="tsd-anchor"></a>
 					<h3>Storage</h3>
-					<div class="tsd-signature tsd-kind-icon">Storage<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>$files<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">readonly </span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Domain</span><span class="tsd-signature-symbol">; </span>cwd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">Storage<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Domain</span><span class="tsd-signature-symbol">; </span>cwd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>files$<span class="tsd-signature-symbol">: </span><a href="globals.html#array_" class="tsd-signature-type">Array$</a><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/storage.ts#L19">lib/storage/storage.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/storage.ts#L19">lib/storage/storage.ts:19</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> $files<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">readonly </span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h5>
-							</li>
-							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Domain</span></h5>
 							</li>
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> cwd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> files$<span class="tsd-signature-symbol">: </span><a href="globals.html#array_" class="tsd-signature-type">Array$</a><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">&gt;</span></h5>
 							</li>
 						</ul>
 					</div>
@@ -222,7 +489,7 @@
 					<div class="tsd-signature tsd-kind-icon">Storage<wbr>Effects<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>$exists<span class="tsd-signature-symbol">: </span><a href="globals.html#existsfileeffect" class="tsd-signature-type">ExistsFileEffect</a><span class="tsd-signature-symbol">; </span>$read<span class="tsd-signature-symbol">: </span><a href="globals.html#readfileeffect" class="tsd-signature-type">ReadFileEffect</a><span class="tsd-signature-symbol">; </span>$write<span class="tsd-signature-symbol">: </span><a href="globals.html#writefileeffect" class="tsd-signature-type">WriteFileEffect</a><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/effects.ts#L18">lib/storage/effects.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/effects.ts#L18">lib/storage/effects.ts:18</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -246,7 +513,7 @@
 					<div class="tsd-signature tsd-kind-icon">Storage<wbr>Events<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>changed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>created<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>deleted<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>seen<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>when<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">&gt;</span>, pattern<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/events.ts#L7">lib/storage/events.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/events.ts#L7">lib/storage/events.ts:7</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -297,7 +564,7 @@
 					<div class="tsd-signature tsd-kind-icon">Storage<wbr>Operations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>exists<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>read<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>file<span class="tsd-signature-symbol">: </span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#withdata" class="tsd-signature-type">WithData</a><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>write<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>file<span class="tsd-signature-symbol">: </span><a href="globals.html#withdata" class="tsd-signature-type">WithData</a><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#withdata" class="tsd-signature-type">WithData</a><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/operations.ts#L8">lib/storage/operations.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/operations.ts#L8">lib/storage/operations.ts:8</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -377,15 +644,18 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="storagewatcher" class="tsd-anchor"></a>
 					<h3>Storage<wbr>Watcher</h3>
-					<div class="tsd-signature tsd-kind-icon">Storage<wbr>Watcher<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>add<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#fileevent" class="tsd-signature-type">FileEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>addDir<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#fileevent" class="tsd-signature-type">FileEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>change<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#fileevent" class="tsd-signature-type">FileEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>unlink<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#fileevent" class="tsd-signature-type">FileEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>unlinkDir<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#fileevent" class="tsd-signature-type">FileEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">Storage<wbr>Watcher<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>$ready<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>add<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#fileevent" class="tsd-signature-type">FileEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>addDir<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#fileevent" class="tsd-signature-type">FileEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>change<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#fileevent" class="tsd-signature-type">FileEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>unlink<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#fileevent" class="tsd-signature-type">FileEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>unlinkDir<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#fileevent" class="tsd-signature-type">FileEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/watcher.ts#L13">lib/storage/watcher.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/watcher.ts#L17">lib/storage/watcher.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> $ready<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Store</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> add<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#fileevent" class="tsd-signature-type">FileEvent</a><span class="tsd-signature-symbol">&gt;</span></h5>
 							</li>
@@ -410,7 +680,7 @@
 					<div class="tsd-signature tsd-kind-icon">Storage<wbr>With<wbr>Addons<span class="tsd-signature-symbol">:</span> <a href="globals.html#with" class="tsd-signature-type">With</a><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#storage" class="tsd-signature-type">Storage</a><span class="tsd-signature-symbol">, </span><a href="globals.html#addons" class="tsd-signature-type">Addons</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/storage.ts#L30">lib/storage/storage.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/storage.ts#L30">lib/storage/storage.ts:30</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -420,7 +690,7 @@
 					<div class="tsd-signature tsd-kind-icon">Use<wbr>Storage<wbr>Effects<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Domain</span><span class="tsd-signature-symbol">; </span>operations<span class="tsd-signature-symbol">: </span><a href="globals.html#storageoperations" class="tsd-signature-type">StorageOperations</a><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/effects.ts#L5">lib/storage/effects.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/effects.ts#L5">lib/storage/effects.ts:5</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -438,20 +708,26 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="usestoragewatcher" class="tsd-anchor"></a>
 					<h3>Use<wbr>Storage<wbr>Watcher</h3>
-					<div class="tsd-signature tsd-kind-icon">Use<wbr>Storage<wbr>Watcher<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>cwd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>events<span class="tsd-signature-symbol">: </span><a href="globals.html#storageevents" class="tsd-signature-type">StorageEvents</a><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">Use<wbr>Storage<wbr>Watcher<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>context<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Domain</span><span class="tsd-signature-symbol">; </span>cwd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>events<span class="tsd-signature-symbol">: </span><a href="globals.html#storageevents" class="tsd-signature-type">StorageEvents</a><span class="tsd-signature-symbol">; </span>paths<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/watcher.ts#L8">lib/storage/watcher.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/watcher.ts#L10">lib/storage/watcher.ts:10</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> context<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Domain</span></h5>
+							</li>
+							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> cwd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 							</li>
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagReadonly">Readonly</span> events<span class="tsd-signature-symbol">: </span><a href="globals.html#storageevents" class="tsd-signature-type">StorageEvents</a></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> paths<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
 							</li>
 						</ul>
 					</div>
@@ -462,7 +738,7 @@
 					<div class="tsd-signature tsd-kind-icon">With&lt;T, W&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">W</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/types.ts#L8">lib/storage/types.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/types.ts#L8">lib/storage/types.ts:8</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -481,7 +757,7 @@
 					<div class="tsd-signature tsd-kind-icon">With<wbr>Data&lt;T&gt;<span class="tsd-signature-symbol">:</span> <a href="globals.html#with" class="tsd-signature-type">With</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/types.ts#L10">lib/storage/types.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/types.ts#L10">lib/storage/types.ts:10</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -497,7 +773,7 @@
 					<div class="tsd-signature tsd-kind-icon">With<wbr>Maybe&lt;T, W&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">W</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/types.ts#L9">lib/storage/types.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/types.ts#L9">lib/storage/types.ts:9</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -516,7 +792,7 @@
 					<div class="tsd-signature tsd-kind-icon">With<wbr>Maybe<wbr>Stats&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>stats<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Stats</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/types.ts#L12">lib/storage/types.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/types.ts#L12">lib/storage/types.ts:12</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -532,7 +808,7 @@
 					<div class="tsd-signature tsd-kind-icon">With<wbr>Path&lt;T&gt;<span class="tsd-signature-symbol">:</span> <a href="globals.html#with" class="tsd-signature-type">With</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/types.ts#L11">lib/storage/types.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/types.ts#L11">lib/storage/types.ts:11</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -548,13 +824,70 @@
 					<div class="tsd-signature tsd-kind-icon">Write<wbr>File<wbr>Effect<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Effect</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#withdata" class="tsd-signature-type">WithData</a><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="globals.html#withdata" class="tsd-signature-type">WithData</a><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#file" class="tsd-signature-type">File</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/effects.ts#L11">lib/storage/effects.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/effects.ts#L11">lib/storage/effects.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="defaultmaxrandomnumber" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> default<wbr>Max<wbr>Random<wbr>Number</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Max<wbr>Random<wbr>Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">100</span><span class="tsd-signature-symbol"> = 100</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/utils.ts#L89">lib/utils.ts:89</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Default max for random number generator.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="array_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> array$</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">array$&lt;T&gt;<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#arrayopts_" class="tsd-signature-type">ArrayOpts$</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="globals.html#array_" class="tsd-signature-type">Array$</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/shapes/array.ts#L38">lib/shapes/array.ts:38</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>A reactive array.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T = <span class="tsd-signature-type">unknown</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#arrayopts_" class="tsd-signature-type">ArrayOpts$</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>none, one, some or all of @see ArrayOpts$</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="globals.html#array_" class="tsd-signature-type">Array$</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="asyncabc" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> asyncABC</h3>
@@ -565,7 +898,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/utils.ts#L20">lib/utils.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/utils.ts#L20">lib/utils.ts:20</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -593,6 +926,29 @@ asyncABC().then(<span class="hljs-built_in">console</span>.log);
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="bool_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> bool$</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">bool$<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#boolopts_" class="tsd-signature-type">BoolOpts$</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="globals.html#bool_" class="tsd-signature-type">Bool$</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/shapes/bool.ts#L16">lib/shapes/bool.ts:16</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#boolopts_" class="tsd-signature-type">BoolOpts$</a><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="globals.html#bool_" class="tsd-signature-type">Bool$</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="double" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> double</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -602,7 +958,7 @@ asyncABC().then(<span class="hljs-built_in">console</span>.log);
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/utils.ts#L55">lib/utils.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/utils.ts#L55">lib/utils.ts:55</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -655,7 +1011,7 @@ asyncABC().then(<span class="hljs-built_in">console</span>.log);
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/utils.ts#L79">lib/utils.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/utils.ts#L79">lib/utils.ts:79</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -701,6 +1057,81 @@ asyncABC().then(<span class="hljs-built_in">console</span>.log);
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="randomelement" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> random<wbr>Element</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">random<wbr>Element&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/utils.ts#L110">lib/utils.ts:110</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Return a random element from the array.</p>
+								</div>
+								<pre><code class="language-ts"> <span class="hljs-keyword">const</span> randomFruit = randomElement&lt;<span class="hljs-built_in">string</span>&gt;([<span class="hljs-string">&#x27;apple&#x27;</span>, <span class="hljs-string">&#x27;banana&#x27;</span>, <span class="hljs-string">&#x27;orange&#x27;</span>, <span class="hljs-string">&#x27;melon&#x27;</span>])
+</code></pre>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T = <span class="tsd-signature-type">unknown</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>options to choose from</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+							<p>random element of provided array, typed as provided type or any</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="randomnumber" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> random<wbr>Number</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">random<wbr>Number<span class="tsd-signature-symbol">(</span>max<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/utils.ts#L97">lib/utils.ts:97</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Return a random number between 0 and max. Default max is @see defaultMaxRandomNumber</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> max: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>maximum number to generate</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="usestorage" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> use<wbr>Storage</h3>
@@ -711,7 +1142,7 @@ asyncABC().then(<span class="hljs-built_in">console</span>.log);
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/storage.ts#L38">lib/storage/storage.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/storage.ts#L38">lib/storage/storage.ts:38</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -744,7 +1175,7 @@ asyncABC().then(<span class="hljs-built_in">console</span>.log);
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/effects.ts#L30">lib/storage/effects.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/effects.ts#L30">lib/storage/effects.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -772,7 +1203,7 @@ asyncABC().then(<span class="hljs-built_in">console</span>.log);
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/events.ts#L18">lib/storage/events.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/events.ts#L18">lib/storage/events.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -795,7 +1226,7 @@ asyncABC().then(<span class="hljs-built_in">console</span>.log);
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/operations.ts#L14">lib/storage/operations.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/operations.ts#L14">lib/storage/operations.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -818,7 +1249,7 @@ asyncABC().then(<span class="hljs-built_in">console</span>.log);
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/789ca03/src/lib/storage/watcher.ts#L21">lib/storage/watcher.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/lordsequoia/seqfx/blob/7d01ad0/src/lib/storage/watcher.ts#L26">lib/storage/watcher.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -845,6 +1276,18 @@ asyncABC().then(<span class="hljs-built_in">console</span>.log);
 				<ul class="before-current">
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#addons" class="tsd-kind-icon">Addons</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#array_" class="tsd-kind-icon">Array$</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#arrayopts_" class="tsd-kind-icon">Array<wbr>Opts$</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#bool_" class="tsd-kind-icon">Bool$</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#boolopts_" class="tsd-kind-icon">Bool<wbr>Opts$</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#existsfileeffect" class="tsd-kind-icon">Exists<wbr>File<wbr>Effect</a>
@@ -906,14 +1349,29 @@ asyncABC().then(<span class="hljs-built_in">console</span>.log);
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#writefileeffect" class="tsd-kind-icon">Write<wbr>File<wbr>Effect</a>
 					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#defaultmaxrandomnumber" class="tsd-kind-icon">default<wbr>Max<wbr>Random<wbr>Number</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#array_" class="tsd-kind-icon">array$</a>
+					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#asyncabc" class="tsd-kind-icon">asyncABC</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#bool_" class="tsd-kind-icon">bool$</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#double" class="tsd-kind-icon">double</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#power" class="tsd-kind-icon">power</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#randomelement" class="tsd-kind-icon">random<wbr>Element</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#randomnumber" class="tsd-kind-icon">random<wbr>Number</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#usestorage" class="tsd-kind-icon">use<wbr>Storage</a>
