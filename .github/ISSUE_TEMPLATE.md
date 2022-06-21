@@ -1,9 +1,12 @@
-- **I'm submitting a ...**
-  [ ] bug report
-  [ ] feature request
-  [ ] question about the decisions made in the repository
-  [ ] question about how to use this project
+Insert description of issue here
 
-- **Summary**
+---
 
-- **Other information** (e.g. detailed explanation, stack traces, related issues, suggestions how to fix, links for us to have context, eg. StackOverflow, personal fork, etc.)
+<!-- Thank you for contributing to this repo, it is much appreciated! 😊 -->
+
+<!-- Before raising an issue, make sure to verify the following. -->
+
+> ✅️ By submitting this issue, I have verified the following
+
+* [] Checked to [see if this issue has already been discussed before](https://github.com/lordsequoia/seqfx/issues) 🤔️
+* [] If proposing new content to be added, made sure enough details were provided 🔍️
