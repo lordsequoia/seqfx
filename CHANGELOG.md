@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/lordsequoia/seqfx/compare/v0.0.2...v0.0.3) (2022-06-21)
+
+
+### Features
+
+* add randomizer utilities ([f7b0a33](https://github.com/lordsequoia/seqfx/commit/f7b0a33a4ae9e47544491393a4d3ac4aa450e5a6))
+* reactive datatypes #wip ([013f438](https://github.com/lordsequoia/seqfx/commit/013f4389e642714cd2d4e8895c91cef4d507ae21))
+
+
+### Bug Fixes
+
+* integrate bool$ and array$ in storage module ([f8c4c54](https://github.com/lordsequoia/seqfx/commit/f8c4c54d9c5c9abdbacd1400067659e31ba6c445))
+
 ### 0.0.2 (2022-06-18)
 
 
