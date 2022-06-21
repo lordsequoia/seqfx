@@ -35,7 +35,9 @@ export type ArrayOpts$<T = unknown> = {
  *
  * @returns
  */
-export const array$ = <T = unknown>(options?: ArrayOpts$): Array$<T> => {
+export const array$ = <T = unknown>(
+  options?: Partial<ArrayOpts$<T>>
+): Array$<T> => {
   const domain = options?.domain || createDomain();
 
   const push = domain.createEvent<T>();

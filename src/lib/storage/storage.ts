@@ -1,6 +1,5 @@
 /* eslint-disable import/order */
-/* eslint-disable functional/immutable-data */
-import { createDomain, Domain, Store } from 'effector';
+import { createDomain, Domain } from 'effector';
 import { resolve as resolvePath } from 'node:path';
 
 import {
@@ -15,11 +14,12 @@ import {
   useStorageWatcher,
   With,
 } from '.';
+import { Array$, array$ } from '../shapes';
 
 export type Storage = {
   readonly cwd: string;
   readonly context: Domain;
-  readonly $files: Store<readonly File[]>;
+  readonly files$: Array$<File>;
 };
 
 export type Addons = StorageEvents &
@@ -42,24 +42,30 @@ export const useStorage = (rootDir?: string): StorageWithAddons => {
   const operations = useStorageOperations(cwd);
   const effects = useStorageEffects({ context, operations });
   const events = useStorageEvents(context);
-  const watcher = useStorageWatcher({ cwd, events });
-
-  const { store } = context;
+  const watcher = useStorageWatcher({ cwd, events, context });
   const { seen, created, deleted, changed } = events;
   const { $read } = effects;
 
-  const $files = store<readonly File[]>([])
-    .on($read.doneData, (state, payload) => [...state, payload])
-    .on(seen, (state, payload) => [...state, payload])
-    .on(created, (state, payload) => [...state, payload])
-    .on(changed, (state, payload) =>
-      state.map((v) => (v.path === payload.path ? payload : v))
-    )
-    .on(deleted, (state, payload) =>
-      state.filter((v) => v.path !== payload.path)
-    );
+  const files$ = array$<File>({ domain: context, key: 'path' });
 
-  const storage = { cwd, context, $files };
+  const { $values, push, update, remove } = files$;
 
-  return Object.assign(storage, watcher, operations, events, effects);
+  $values.on($read.doneData, (state, payload) =>
+    state.map((v) => (v.path === payload.path ? payload : v))
+  );
+
+  $read.doneData.watch(files$.update);
+
+  seen.watch(push);
+  created.watch(push);
+  changed.watch(update);
+  deleted.watch(remove);
+
+  return Object.assign(
+    { cwd, context, files$ },
+    watcher,
+    operations,
+    events,
+    effects
+  );
 };
