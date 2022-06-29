@@ -68,7 +68,7 @@ export const useStorage = (options: {
     options.watcher || useStorageWatcher({ cwd, events, context });
 
   const stream$ =
-    options.operations.tail || useFiletail({ rootDir: cwd }).stream$;
+    options.operations?.tail || useFiletail({ rootDir: cwd }).stream$;
 
   const { $read } = effects;
 
