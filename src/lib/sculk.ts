@@ -20,24 +20,34 @@ export const sculk = (rootDir?: string) => {
 
   const { playerJoined, playerLeft, chatMessage } = events$;
 
-  const handleEvent = <T extends MessageLog>(
-    event: T,
-    callback: (event: T) => void
-  ) => callback(event);
-
   const hooks$ = {
     $serverLogged: (callback: (event: string) => void) =>
       pushedLog.watch((v) => callback(v)),
-    $playerJoined: (callback: (event: PresenceEvent) => void) =>
-      playerJoined.watch((v) => callback(v)),
+    $playerJoined: (
+      callback: (timestamp: string, playerName: string) => void
+    ) => playerJoined.watch((v) => callback(v.timestamp, v.data.playerName)),
+    $playerLeft: (callback: (timestamp: string, playerName: string) => void) =>
+      playerLeft.watch((v) => callback(v.timestamp, v.data.playerName)),
+    $chatMessage: (
+      callback: (
+        timestamp: string,
+        playerName: string,
+        chatMessage: string
+      ) => void
+    ) =>
+      chatMessage.watch((v) =>
+        callback(v.timestamp, v.data.playerName, v.data.chatMessage)
+      ),
   };
 
-  return {
-    context,
-    storage: storage,
-    logs$: pushedLog,
-    messages$: pushedMessage,
-    events$,
-    hooks$,
-  };
+  return Object.assign(
+    {
+      context,
+      storage: storage,
+      logs$: pushedLog,
+      messages$: pushedMessage,
+      events$,
+    },
+    hooks$
+  );
 };
