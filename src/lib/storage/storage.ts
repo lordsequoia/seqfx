@@ -1,6 +1,7 @@
 /* eslint-disable import/order */
 import { createDomain, Domain } from 'effector';
 import { resolve as resolvePath } from 'node:path';
+import { Observable } from 'rxjs';
 
 import {
   File,
@@ -15,6 +16,7 @@ import {
   With,
 } from '.';
 import { Array$, array$ } from '../shapes';
+import { Filetail, useFiletail } from './filetail';
 
 export type Storage = {
   readonly cwd: string;
@@ -25,7 +27,8 @@ export type Storage = {
 export type Addons = StorageEvents &
   StorageEffects &
   StorageOperations &
-  StorageWatcher;
+  StorageWatcher &
+  Filetail;
 
 export type StorageWithAddons = With<Storage, Addons>;
 
@@ -43,6 +46,7 @@ export const useStorage = (rootDir?: string): StorageWithAddons => {
   const effects = useStorageEffects({ context, operations });
   const events = useStorageEvents(context);
   const watcher = useStorageWatcher({ cwd, events, context });
+  const { stream$ } = useFiletail({ rootDir: cwd })
   const { seen, created, deleted, changed } = events;
   const { $read } = effects;
 
@@ -66,6 +70,7 @@ export const useStorage = (rootDir?: string): StorageWithAddons => {
     watcher,
     operations,
     events,
-    effects
+    effects,
+    stream$,
   );
 };

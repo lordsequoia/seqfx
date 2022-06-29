@@ -51,6 +51,7 @@
     "chokidar": "^3.5.3",
     "effector": "^22.3.0",
     "rxjs": "^7.5.5",
+    "tail": "^2.2.4",
     "type-fest": "^2.13.1"
   },
   "devDependencies": {
@@ -58,6 +59,7 @@
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/micromatch": "^4.0.2",
     "@types/node": "^18.0.0",
+    "@types/tail": "^2.2.1",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
     "ava": "^3.12.1",
