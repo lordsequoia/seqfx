@@ -3,15 +3,15 @@ import { createDomain, Domain } from 'effector';
 import { resolve as resolvePath } from 'node:path';
 
 import {
+  createStorageEffects,
   File,
   StorageEffects,
   StorageEvents,
   StorageOperations,
   StorageWatcher,
-  createStorageEffects,
   useDefaultStorageEffects,
-  useStorageEvents,
   useDefaultStorageOperations,
+  useStorageEvents,
   useStorageWatcher,
   With,
 } from '.';
@@ -67,7 +67,9 @@ export const useStorage = (options: {
   const watcher =
     options.watcher || useStorageWatcher({ cwd, events, context });
 
-  const stream$ = options.tail || useFiletail({ rootDir: cwd }).stream$;
+  const stream$ =
+    options.operations.tail || useFiletail({ rootDir: cwd }).stream$;
+
   const { $read } = effects;
 
   const $files = array$<File>({ domain: context, key: 'path' });

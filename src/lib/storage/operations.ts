@@ -5,8 +5,9 @@ import { resolve as resolvePath } from 'node:path';
 
 import { StreamFile } from '../logtail';
 
-import { File, WithData } from '.';
 import { useFiletail } from './filetail';
+
+import { File, WithData } from '.';
 
 // eslint-disable-next-line functional/no-mixed-type
 export type StorageOperations = {

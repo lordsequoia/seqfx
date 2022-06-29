@@ -19,6 +19,7 @@
     "libauth",
     "Logtail",
     "mkdir",
+    "patronum",
     "prettierignore",
     "sandboxed",
     "seqfx",
