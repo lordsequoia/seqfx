@@ -1,34 +1,34 @@
-import { createDomain } from "effector"
+import { createDomain } from 'effector';
 
-import { useStorage } from "./lib"
-import { useLogtail } from "./lib/logtail"
+import { useStorage } from './lib';
+import { useLogtail } from './lib/logtail';
 
 function startDemo(rootDir: string, timeout?: number) {
-    console.log('starting seqfx demo')
-    const demo = createDomain('demo')
+  console.log('starting seqfx demo');
+  const demo = createDomain('demo');
 
-    const storage = useStorage({ context: demo, rootDir })
+  const storage = useStorage({ context: demo, rootDir });
 
-    console.log(`using storage: ${storage.cwd}`, { stream$: storage.stream$ })
+  console.log(`using storage: ${storage.cwd}`, { stream$: storage.stream$ });
 
-    const { rawLogs } = useLogtail(storage)
+  const { pushedLog } = useLogtail({ context: demo, tail: storage.stream$ });
 
-    const demoLogtail = () => {
-        console.log(`loading logtail for: ${rootDir}`)
+  const demoLogtail = () => {
+    console.log(`loading logtail for: ${rootDir}`);
 
-        return rawLogs.watch(rawLog => console.log(`RAW LOG -> ${rawLog}`))
-    }
+    return pushedLog.watch((rawLog) => console.log(`RAW LOG -> ${rawLog}`));
+  };
 
-    const logtailDemo = demoLogtail()
+  const logtailDemo = demoLogtail();
 
-    const stopDemo = () => {
-        console.log('stopping seqfx demo')
+  const stopDemo = () => {
+    console.log('stopping seqfx demo');
 
-        logtailDemo.unsubscribe()
-        process.exit(0)
-    }
+    logtailDemo.unsubscribe();
+    process.exit(0);
+  };
 
-    setTimeout(stopDemo, timeout || 30000)
+  setTimeout(stopDemo, timeout || 30000);
 }
 
-export default startDemo(process.argv[2])
+export default startDemo(process.argv[2]);
