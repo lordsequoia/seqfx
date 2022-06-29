@@ -55,6 +55,7 @@
     "chokidar": "^3.5.3",
     "effector": "^22.3.0",
     "moment": "^2.29.3",
+    "patronum": "^1.8.5",
     "rxjs": "^7.5.5",
     "tail": "^2.2.4",
     "type-fest": "^2.13.1"

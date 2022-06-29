@@ -1,7 +1,7 @@
 import { Effect, Store } from 'effector';
 import { Moment } from 'moment';
 
-import { State } from '../shapes/state';
+import { State } from './state';
 
 export type FilePath = {
   readonly path: string;
