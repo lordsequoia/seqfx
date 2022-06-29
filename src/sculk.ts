@@ -1,11 +1,9 @@
 /* eslint-disable functional/no-return-void */
 import { createDomain } from 'effector';
 
-import { useLoggedEvents } from './logtail/events';
-import { useLogtail } from './logtail/logs';
-import { useStorage } from './storage/storage';
+import { useLoggedEvents, useLogtail, useStorage } from '.';
 
-export const sculk = (rootDir?: string) => {
+export const sculk$ = (rootDir?: string) => {
   const context = createDomain('sculk');
   const storage = useStorage({ context, rootDir });
   const { pushedLog, pushedMessage } = useLogtail({
