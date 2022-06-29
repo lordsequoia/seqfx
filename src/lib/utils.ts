@@ -1,3 +1,5 @@
+import { Domain, Store } from 'effector';
+
 /**
  * A sample async function (to demo Typescript's es7 async/await down-leveling).
  *

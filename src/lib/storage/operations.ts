@@ -3,15 +3,19 @@ import { existsSync } from 'node:fs';
 import { readFile, writeFile } from 'node:fs/promises';
 import { resolve as resolvePath } from 'node:path';
 
+import { StreamFile } from '../logtail';
+
 import { File, WithData } from '.';
 
+// eslint-disable-next-line functional/no-mixed-type
 export type StorageOperations = {
   readonly read: (file: File) => Promise<WithData<File>>;
   readonly write: (file: WithData<File>) => Promise<WithData<File>>;
   readonly exists: ({ path }: { readonly path: string }) => Promise<boolean>;
+  readonly tail: StreamFile;
 };
 
-export const useStorageOperations = (cwd: string): StorageOperations => {
+export const useDefaultStorageOperations = (cwd: string): StorageOperations => {
   const read = async (file: File): Promise<WithData<File>> => {
     const buffer = await readFile(resolvePath(cwd, file.path));
 
@@ -35,5 +39,7 @@ export const useStorageOperations = (cwd: string): StorageOperations => {
     });
   };
 
-  return { read, write, exists };
+  const tail = 
+
+  return { read, write, exists, tail };
 };

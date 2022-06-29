@@ -8,16 +8,18 @@ import {
   StorageEvents,
   StorageOperations,
   StorageWatcher,
-  useStorageEffects,
+  createStorageEffects,
+  useDefaultStorageEffects,
   useStorageEvents,
-  useStorageOperations,
+  useDefaultStorageOperations,
   useStorageWatcher,
   With,
 } from '.';
 import { Array$, array$ } from '../shapes';
 import { Filetail, useFiletail } from './filetail';
+import { StreamFile } from '../logtail/index';
 
-export type FileArray$ = Array$<File>
+export type FileArray$ = Array$<File>;
 
 export type Storage = {
   readonly cwd: string;
@@ -25,11 +27,7 @@ export type Storage = {
   readonly $files: FileArray$;
 };
 
-export type Addons = StorageEvents &
-  StorageEffects &
-  StorageOperations &
-  StorageWatcher &
-  Filetail;
+export type Addons = StorageEvents & StorageEffects & StorageWatcher & Filetail;
 
 export type StorageWithAddons = With<Storage, Addons>;
 
@@ -39,17 +37,36 @@ export type StorageWithAddons = With<Storage, Addons>;
  * @param rootDir The directory to use as root dir for the storage.
  * @returns
  */
-export const useStorage = (options: { readonly context?: Domain; readonly rootDir?: string }): StorageWithAddons => {
+export const useStorage = (options: {
+  readonly context?: Domain;
+  readonly rootDir?: string;
+  readonly events?: StorageEvents;
+  readonly operations?: StorageOperations;
+  readonly effects?: StorageEffects;
+  readonly watcher?: StorageWatcher;
+}): StorageWithAddons => {
   const cwd = resolvePath(options.rootDir || '.');
 
-  const context = options.context === undefined ? createDomain('storage') : options.context.createDomain('storage')
+  const context =
+    options.context === undefined
+      ? createDomain('storage')
+      : options.context.createDomain('storage');
 
-  const operations = useStorageOperations(cwd);
-  const effects = useStorageEffects({ context, operations });
-  const events = useStorageEvents(context);
-  const watcher = useStorageWatcher({ cwd, events, context });
-  const { stream$ } = useFiletail({ rootDir: cwd })
+  const effects =
+    options.effects ||
+    useDefaultStorageEffects({
+      context,
+      operations: options.operations || useDefaultStorageOperations(cwd),
+      effects: createStorageEffects(context),
+    });
+
+  const events = options.events || useStorageEvents(context);
   const { seen, created, deleted, changed } = events;
+
+  const watcher =
+    options.watcher || useStorageWatcher({ cwd, events, context });
+
+  const { stream$ } = options.tail || useFiletail({ rootDir: cwd });
   const { $read } = effects;
 
   const $files = array$<File>({ domain: context, key: 'path' });
@@ -75,8 +92,7 @@ export const useStorage = (options: { readonly context?: Domain; readonly rootDi
       stream$,
     },
     watcher,
-    operations,
     events,
-    effects,
+    effects
   );
 };

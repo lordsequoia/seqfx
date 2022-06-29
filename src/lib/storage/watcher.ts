@@ -14,14 +14,17 @@ export type UseStorageWatcher = {
   readonly paths?: string | readonly string[];
 };
 
-export type StorageWatcher = {
-  readonly $ready: Store<boolean>;
+export type WatcherEvents = {
   readonly add: Event<FileEvent>;
   readonly addDir: Event<FileEvent>;
   readonly change: Event<FileEvent>;
   readonly unlink: Event<FileEvent>;
   readonly unlinkDir: Event<FileEvent>;
 };
+
+export type StorageWatcher = {
+  readonly $ready: Store<boolean>;
+} & WatcherEvents;
 
 export const useStorageWatcher = (
   options: UseStorageWatcher
