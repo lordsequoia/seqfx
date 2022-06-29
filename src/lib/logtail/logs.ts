@@ -42,7 +42,8 @@ export const serverLogRegex = /\[(.*)\] \[(.*)\/(.*)\]: (.*)/m;
 export const parseRawLog = (v: RawLog): MessageLog => {
   const result = serverLogRegex.exec(v);
 
-  if (result === undefined) throw new Error(`Not a server log: ${v}`);
+  if (result === undefined || result === null)
+    throw new Error(`Not a server log: ${v}`);
 
   const [timestamp, group, level, message] = result;
 

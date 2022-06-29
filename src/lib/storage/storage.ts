@@ -44,6 +44,7 @@ export const useStorage = (options: {
   readonly operations?: StorageOperations;
   readonly effects?: StorageEffects;
   readonly watcher?: StorageWatcher;
+  readonly tail?: StreamFile;
 }): StorageWithAddons => {
   const cwd = resolvePath(options.rootDir || '.');
 
@@ -66,7 +67,7 @@ export const useStorage = (options: {
   const watcher =
     options.watcher || useStorageWatcher({ cwd, events, context });
 
-  const { stream$ } = options.tail || useFiletail({ rootDir: cwd });
+  const stream$ = options.tail || useFiletail({ rootDir: cwd }).stream$;
   const { $read } = effects;
 
   const $files = array$<File>({ domain: context, key: 'path' });

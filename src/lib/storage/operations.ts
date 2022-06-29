@@ -6,6 +6,7 @@ import { resolve as resolvePath } from 'node:path';
 import { StreamFile } from '../logtail';
 
 import { File, WithData } from '.';
+import { useFiletail } from './filetail';
 
 // eslint-disable-next-line functional/no-mixed-type
 export type StorageOperations = {
@@ -39,7 +40,7 @@ export const useDefaultStorageOperations = (cwd: string): StorageOperations => {
     });
   };
 
-  const tail = 
+  const tail = useFiletail({ rootDir: cwd }).stream$;
 
   return { read, write, exists, tail };
 };
